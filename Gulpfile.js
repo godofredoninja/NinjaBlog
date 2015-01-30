@@ -4,7 +4,7 @@
 var gulp				= require('gulp'),
 	connect				= require('gulp-connect'),
 	stylus				= require('gulp-stylus'),
-	nib					= require('nib'),
+	nib					  = require('nib'),
 	jshint				= require('gulp-jshint'),
 	stylish				= require('jshint-stylish'),
 	inject				= require('gulp-inject'),
