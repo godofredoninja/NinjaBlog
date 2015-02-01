@@ -1,0 +1,36 @@
+<header class="Header">
+
+  <h1 class="Header-logo">
+    <a href="{{@blog.url}}" class="eader-link">
+      {{#if @blog.logo}}
+        <figure class="Header-imageContent">
+          <img src="{{@blog.logo}}" alt="Diseño web GodoFredo" class="Header-image">
+        </figure>
+      {{/if}}
+      {{@blog.title}}
+    </a>
+    <div class="Header-des">
+      Frontet . Backend
+    </div>
+  </h1>
+
+  <div class="Header-search">
+    <input type="text">
+     <button>Buscar</button>
+  </div>
+
+  <nav class="MainMenu">
+    <a href="#" class="MainMenu-link">Sobre Mi</a>
+    <a href="#" class="MainMenu-link">Servicios</a>
+    <a href="#" class="MainMenu-link">Contacto</a>
+  </nav>
+
+  <aside class="Header-aside">
+    <a href="#" class="Header-asideLink">Facebook</a>
+    <a href="#" class="Header-asideLink">twitter</a>
+    <a href="#" class="Header-asideLink">github</a>
+    <a href="#" class="Header-asideLink">youtube</a>
+    <a href="#" class="Header-asideLink">gmail</a>
+  </aside>
+
+</header>

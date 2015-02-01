@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <title>{{meta_title}}</title>
 
+  <link href='//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
   <!-- bower:css -->
   <!-- endbower -->
   <!-- inject:css -->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!-- endinject -->
 
 </head>
 <body>
 
   <div class="Landing">
-
-
-
+    {{> "header"}}
+    {{{body}}}
+    {{> "footer"}}
   </div>
 
   <!-- bower:js -->
+  <script src="/assets/lib/jquery/dist/jquery.js"></script>
   <!-- endbower -->
   <!-- inject:js -->
   <!-- endinject -->
+
 </body>
 </html>
+

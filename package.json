@@ -10,5 +10,8 @@
     "jshint-stylish": "^1.0.0",
     "nib": "^1.1.0",
     "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "wiredep": "^2.2.2"
   }
 }
