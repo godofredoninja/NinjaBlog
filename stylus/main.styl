@@ -2,9 +2,12 @@
 @import 'nib/vendor'
 @import 'nib/gradients'
 
-
 @import 'normalize'
+@import 'iconos'
+
 @import 'mixin'
+
+iconitos = 'icomoon'
 
 fontBody = 'Lato', sans-serif
 
@@ -19,9 +22,9 @@ a
   color ColorBlue
 
 body
-  color #424242
+  color #3e3f3a
   font-family fontBody
-  font-size 1.2em
+  font-size 1em
   font-weight 300
   line-height 1.5
   text-align center
@@ -57,14 +60,15 @@ input[type=search]
 input[type=email]
 input[type=url]
   border 0
-  border-radius 10px
+  border-radius 5px
   box-sizing border-box
-  height 50px
+  height 40px
   line-height 1.2
-  padding 5px 15px 5px 35px
+  padding 5px 35px 5px 10px
   width 100%
   margin-bottom 20px
-  box-shadow inset 2px 2px 0 rgba(187,187,187,.7)
+  background #333333
+  color #fff
 
 textarea
   height 100px
@@ -80,23 +84,23 @@ input[type=url]
   &:focus
     outline none
     border transparent
+    background #111
+    color #8b8b8b
 
 input[type=reset]
 input[type=submit]
 button
 .Btn
   border 0
-  border-radius 10px
-  color #fff
+  border-radius 5px
+  color #8b8b8b
   font-weight bold
   margin-bottom 20px
   outline none
   padding 8px 20px
   text-transform uppercase
   width 100%
-
-  &:hover
-    background #b03a3d
+  height 40px
 
 
 
@@ -106,3 +110,4 @@ button
   text-shadow 1px 1px #fff
 
 @import 'body'
+@import 'keyframes'

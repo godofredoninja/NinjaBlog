@@ -1,3 +1,165 @@
+//Content - Post
+.Content
+  margin 2.5em 0
+  &-title
+    color #484848
+    font-size 1.5em
+    line-height 1
+    margin 0
+    padding 0
+    padding 1em 0
+    text-align left
+  &-header
+    &-imageContent
+      line-height 0
+
+// Main Post Content
+.Main
+  text-align left
+  color #3e3f3a
+
+  h2
+  h3
+  h4
+  h5
+    color #f04f53
+    padding 1em 0
+
+  blockquote
+  ul
+  li
+  ol
+    &:before
+        font-family: 'icomoon';
+        speak none
+        font-style normal
+        font-weight normal
+        font-variant normal
+        text-transform none
+        line-height 1
+        -webkit-font-smoothing antialiased
+        -moz-osx-font-smoothing grayscale
+
+
+  pre
+    background #ece8e6
+    color #333333
+    padding .5em
+  a
+    color #1378ae
+    display inline
+    border-bottom .08em solid rgba(0,0,0,.1)
+    padding-bottom .2em
+    &:hover
+      border-bottom .08em solid ColorBlue
+
+  blockquote
+    color #9d9d9d
+    width 90%
+    margin 0 auto
+    font-style italic
+    position relative
+    padding 1em 0 1em 1em
+    &:before
+      position absolute
+      left -1em
+      font-size 1.5em
+      content "\e60a"
+      top .5em
+
+
+
+  ul
+    li
+      &:before
+        content "\e611"
+        font-family iconitos
+        color ColorBlue
+        margin-right 5px
+      ul
+        li
+          margin-left 10px
+          &:before
+            content ""
+            height 5px
+            width 5px
+            border-radius 50%
+            background ColorCoral
+
+  ol
+    list-style-type none
+    margin 0
+    margin-left 1em
+    padding 0
+    counter-reset li-counter
+
+    li
+      position relative
+      margin-bottom 20px
+      padding-left 0.5em
+      border-left 2px solid #CCCCCC
+
+      &:before
+        position absolute
+        top 0
+        left -1em
+        width 0.8em
+        line-height 1
+        font-weight bold
+        text-align right
+        color ColorBlue
+
+        content counter(li-counter)
+        counter-increment li-counter
+
+
+
+// Header
+.Header
+  background #232323
+  position relative
+  z-index 10
+  padding-bottom 1em
+  &-image
+    width 100px
+    border-radius 50px
+  &-logo
+    margin 0
+    padding 0
+    font-size 1.2em
+    color #dedede
+    a
+      color #fff
+  &-search
+    position relative
+    width 260px
+    margin 10px auto 0 auto
+    button
+      background transparent
+      font-size 1.3em
+      position absolute
+      right 0
+      top 0
+      width 50px
+      z-index 10
+  &-social
+    padding 1em 0 .5em 0
+    a
+      margin-right .3em
+      &:last-of-type
+        margin-right 0
+
+//Menu
+.MainMenu
+  &-link
+    display inline-block
+    vertical-align top
+    color #666666
+    margin 0 10px
+    font-weight bold
+    &:hover
+      color #fff
+
 .Divider
   position relative
   span
@@ -26,6 +188,8 @@
     color #777777
   span
     color #0a8ccc
+  &-digital
+    max-width 130px
 
 
 
@@ -34,3 +198,106 @@
 .Landing
   position relative
   background url('../img/bg-Body.jpg')
+
+
+// Post Home
+
+.Post
+  padding 2em 0 1em 0
+  &-items
+    margin-top 1.5em
+    overflow hidden
+  &-main
+    text-align left
+  &-date
+    color #9d9d9d
+    font-size .8em
+    font-style italic
+    font-weight bold
+    text-transform uppercase
+    &:before
+      margin-right 3px
+      font-size 1.2em
+  &-title
+    font-size 1.2em
+  &-titlelink
+    color #484848
+    line-height 1
+    margin-bottom .5em
+    margin-top .5em
+  &-excerpt
+    color #656565
+  &-autorImage
+    width 50px
+    border-radius 50%
+  &-footer
+    position relative
+    padding .5em 0
+    overflow hidden
+  &-autorLink
+    color #1378ae
+    font-weight bold
+    left 60px
+    position absolute
+    text-transform capitalize
+    top 7px
+  &-tag
+    font-style italic
+    left 60px
+    position absolute
+    top 30px
+    white-space nowrap
+    width 100%
+    &:before
+      font-size .9em
+      color #656565
+    a
+      display inline
+      color #656565
+  &-tagEnd
+    background linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1))
+    content " "
+    height 20px
+    position absolute
+    right 50px
+    width 50px
+
+// Pagination
+.pagination
+  padding 3em 0
+.page-number
+.older-posts
+.newer-posts
+  background #1378ae
+  border-bottom 4px solid #0d6596
+  border-radius 5px
+  color #fff
+  display inline-block
+  font-weight bold
+  padding .5em
+  vertical-align top
+  &:hover
+    background #F04F53
+    border-bottom 4px solid #B4181C
+
+
+
+
+// Sidebar-right
+.Sidebar
+  &-items
+    margin-bottom 1em
+    padding 0 0 1em 0
+  &-content
+    padding 0 1em 0 1em
+  &-title
+    color #fff
+    padding 5px 0
+
+
+// Share
+.Share
+  &-items
+    color #fff
+
+

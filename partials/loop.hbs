@@ -1,25 +1,34 @@
 {{! Lista de todo mis Post }}
 <section class="Post">
+
   {{#foreach posts}}
-  <article class="Post-items">
-    <header class="Post-header">
-      <h2 class="Post-title"><a href="{{url}}">{{{title}}}</a></h2>
-    </header>
-    <section class="Post-excerpt">
-      <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-    <footer class="Post-footer">
-      {{#if author.image}}
-        <img class="Post-autor" src="{{author.image}}" alt="Author image" nopin="nopin" />
-      {{/if}}
-      {{#author}}
-          <a class="Post-autorLink" href="{{url}}">{{name}}</a>
-      {{/author}}
-      {{tags prefix=" on "}}
-      <time class="Post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-    </footer>
+
+  <article class="Post-items u-border">
+      <div class="Post-main">
+        <header class="Post-header">
+          {{#if image}}
+            <a href="{{url}}" class="Post-imageContent"><img class="Post-image" src="{{image}}" alt="{{{title}}}" /></a>
+          {{/if}}
+          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          <h2 class="Post-title"><a class="Post-titlelink" href="{{url}}">{{{title}}}</a></h2>
+        </header>
+        <section class="Post-excerpt">
+          <p>{{excerpt characters="110"}}...</p>
+        </section>
+        <footer class="Post-footer">
+          {{#if author.image}}
+            <img class="Post-autorImage" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />
+          {{/if}}
+          {{#author}}
+            <div class="Post-autorLink">{{name}}</div>
+          {{/author}}
+          {{#if tags}} <div class="Post-tag icon-tags">{{tags separator=" . "}} <i class="Post-tagEnd"></i> </div> {{/if }}
+        </footer>
+      </div>
   </article>
+
   {{/foreach}}
+
 </section>
 {{! Previous/next page links - displayed on every page }}
 
