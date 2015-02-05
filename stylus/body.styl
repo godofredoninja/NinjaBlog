@@ -1,17 +1,160 @@
+// Aside Top
+.AsideTop
+  background #051928
+  padding 1em 0 .6em 0
+  &-socialItems
+    display none
+  &-search
+    position relative
+  &-input
+    box-shadow none !important
+    height 40px !important
+    padding 5px 40px 5px 15px !important
+    margin 0 auto !important
+    &:focus
+      box-shadow none
+  &-button
+    position absolute
+    right 0
+    top 0
+    width 50px
+    margin 0
+    height 40px
+    padding 0
+    background transparent
+    color #afafaf
+    &:hover
+      background transparent
+
 //Content - Post
 .Content
-  margin 2.5em 0
   &-title
     color #484848
     font-size 1.5em
     line-height 1
     margin 0
     padding 0
-    padding 1em 0
+    padding .5em 0 1em 0
     text-align left
   &-header
-    &-imageContent
-      line-height 0
+    text-align left
+
+// Home Link Blog
+.Homeblog
+  text-align left
+  padding 1em 0
+  &-link
+    color #777
+    font-weight bold
+    &:before
+      margin-right 6px
+
+// Header
+.Header
+  background #fff
+  left 0
+  position relative
+  right 0
+  top 0
+  z-index 100
+  &-logo
+    font-size 1em
+    margin 0
+    padding-bottom .2em
+    position relative
+  &-logoLink
+    box-sizing border-box
+    padding .7em 0 0 .5em
+    width 200px
+  &-logoImagen
+    transition all 0.5s ease-in-out
+  &-iconMobile
+    background ColorCoral
+    border 1px solid #fff
+    border-radius 50%
+    box-shadow  0px 1px 2px rgba(0, 0, 0, 0.2)
+    color #fff
+    cursor pointer
+    height 50px
+    line-height 60px
+    position absolute
+    right .5em
+    top .5em
+    width 50px
+    z-index 9999
+    &:before
+      font-size 1.6em
+  .u-wrappers
+    padding 0
+
+// Menu
+.MainMenu
+  backface-visibility hidden
+  background #fff
+  box-shadow  1px -5px 1px rgba(204,204,204,0.8)
+  box-sizing border-box
+  height 0
+  overflow hidden
+  position relative
+  right 0
+  transition height 0.5s ease-out 0s
+  width 100%
+  z-index 100
+
+  &-callback
+    &:checked
+      & ~ .MainMenu
+        height 100px
+  &-list
+    overflow-x scroll
+    padding-bottom 10px
+    padding-top 10px
+    white-space nowrap
+    width 100%
+  &-item
+    color #696969
+    display inline-block
+    font-size 15px
+    opacity .9
+    padding 0 5px 0 5px
+    position relative
+    width 75px
+  &-link
+    box-sizing border-box
+    color blue
+    display block
+    font-weight bold
+    height 90px
+    position relative
+
+    span
+      color #696969
+      opacity .9
+      position relative
+
+    i
+      color ColorCoral
+      display block
+      font-size 1.5em
+      line-height 40px
+      &:before
+        font-size 1.6em
+
+    .icon-home
+      color #444
+    .icon-user
+      color ColorGreen
+    .icon-services
+      color ColorCoral
+    .icon-proces
+      color ColorOrange
+    .icon-porfolio
+      color ColorBlue
+    .icon-blog
+      color #945DA5
+    .icon-message
+      color #748089
+
 
 // Main Post Content
 .Main
@@ -39,35 +182,14 @@
         line-height 1
         -webkit-font-smoothing antialiased
         -moz-osx-font-smoothing grayscale
-
-
-  pre
-    background #ece8e6
-    color #333333
-    padding .5em
   a
+    border-bottom .08em solid rgba(0,0,0,.1)
     color #1378ae
     display inline
-    border-bottom .08em solid rgba(0,0,0,.1)
+    font-weight bold
     padding-bottom .2em
     &:hover
       border-bottom .08em solid ColorBlue
-
-  blockquote
-    color #9d9d9d
-    width 90%
-    margin 0 auto
-    font-style italic
-    position relative
-    padding 1em 0 1em 1em
-    &:before
-      position absolute
-      left -1em
-      font-size 1.5em
-      content "\e60a"
-      top .5em
-
-
 
   ul
     li
@@ -86,82 +208,12 @@
             border-radius 50%
             background ColorCoral
 
-  ol
-    list-style-type none
-    margin 0
-    margin-left 1em
-    padding 0
-    counter-reset li-counter
-
-    li
-      position relative
-      margin-bottom 20px
-      padding-left 0.5em
-      border-left 2px solid #CCCCCC
-
-      &:before
-        position absolute
-        top 0
-        left -1em
-        width 0.8em
-        line-height 1
-        font-weight bold
-        text-align right
-        color ColorBlue
-
-        content counter(li-counter)
-        counter-increment li-counter
 
 
-
-// Header
-.Header
-  background #232323
-  position relative
-  z-index 10
-  padding-bottom 1em
-  &-image
-    width 100px
-    border-radius 50px
-  &-logo
-    margin 0
-    padding 0
-    font-size 1.2em
-    color #dedede
-    a
-      color #fff
-  &-search
-    position relative
-    width 260px
-    margin 10px auto 0 auto
-    button
-      background transparent
-      font-size 1.3em
-      position absolute
-      right 0
-      top 0
-      width 50px
-      z-index 10
-  &-social
-    padding 1em 0 .5em 0
-    a
-      margin-right .3em
-      &:last-of-type
-        margin-right 0
-
-//Menu
-.MainMenu
-  &-link
-    display inline-block
-    vertical-align top
-    color #666666
-    margin 0 10px
-    font-weight bold
-    &:hover
-      color #fff
-
+// Divider
 .Divider
   position relative
+  height 6px
   span
     float left
     height 6px
@@ -175,19 +227,26 @@
   &-yellow
     background #f2ee69
 
+
 // Footer
 .Footer
-  background #fff
+  background #051928
   position relative
-  width 100%
-  &-des
+  color #fff
+  padding 1.5em 0px 0.5em
+  &-title
+    font-size 1.5em
+    text-transform uppercase
+  &-socialLink
+    margin-right 5px
+  &-colRight
     padding 1em 0
     font-weight bold
-  a
-    display inline
-    color #777777
-  span
-    color #0a8ccc
+    a
+      display inline
+      color #777777
+    span
+      color #0a8ccc
   &-digital
     max-width 130px
 
@@ -201,11 +260,10 @@
 
 
 // Post Home
-
 .Post
-  padding 2em 0 1em 0
+  padding 0 0 1em 0
   &-items
-    margin-top 1.5em
+    margin-bottom 1.5em
     overflow hidden
   &-main
     text-align left
@@ -264,7 +322,7 @@
 
 // Pagination
 .pagination
-  padding 3em 0
+  padding 1em 0 3em 0
 .page-number
 .older-posts
 .newer-posts
@@ -285,6 +343,7 @@
 
 // Sidebar-right
 .Sidebar
+  padding-top 1em
   &-items
     margin-bottom 1em
     padding 0 0 1em 0
@@ -294,10 +353,21 @@
     color #fff
     padding 5px 0
 
-
 // Share
 .Share
   &-items
+    border-radius 5px
     color #fff
+    display inline-block
+    font-size 1.2em
+    font-weight bold
+    margin-right 2%
+    margin-top 15px
+    min-width 230px
+    padding 5px 0
+    vertical-align top
+    width 30%
+    &:last-of-type
+      margin-right 0
 
 

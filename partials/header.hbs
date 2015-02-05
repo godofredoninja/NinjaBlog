@@ -1,42 +1,65 @@
-<header class="Header">
-
-  <h1 class="Header-logo">
-    <a href="{{@blog.url}}" class="eader-link">
-      {{#if @blog.logo}}
-        <figure class="Header-imageContent">
-          <img src="{{@blog.logo}}" alt="Diseño web GodoFredo" class="Header-image u-avatarAnimation">
-        </figure>
-      {{/if}}
-      {{@blog.title}}
-    </a>
-    <div class="Header-des">
-      Frontet . Backend
-    </div>
-  </h1>
-
-  <div class="Header-search">
-    <input type="text">
-     <button class="icon-search"></button>
-  </div>
-
-  <nav class="MainMenu">
-    <a href="#" class="MainMenu-link">Sobre Mi</a>
-    <a href="#" class="MainMenu-link">Servicios</a>
-    <a href="#" class="MainMenu-link">Contacto</a>
-  </nav>
-
-  <aside class="Header-social">
-    <a href="/hola" target="_bank" class="u-social icon-facebook"></a>
-    <a href="#" target="_bank" class="u-social icon-twitter"></a>
-    <a href="#" target="_bank" class="u-social icon-github"></a>
-    <a href="#" target="_bank" class="u-social icon-youtube"></a>
-    <a href="#" target="_bank" class="u-social icon-google"></a>
-  </aside>
-
-</header>
-<div class="Divider Header-divider">
+<div class="Divider">
   <span class="Divider-red"></span>
   <span class="Divider-blue"></span>
   <span class="Divider-green"></span>
   <span class="Divider-yellow"></span>
 </div>
+<aside class="AsideTop">
+  <div class="u-wrappers">
+    <ul class="AsideTop-social">
+      <li class="AsideTop-socialItems">Facebook</li>
+      <li class="AsideTop-socialItems">Twitter</li>
+      <li class="AsideTop-socialItems">Youtube</li>
+    </ul>
+    <div class="AsideTop-search">
+      <input class="AsideTop-input" type="text">
+      <button class="AsideTop-button icon-search"></button>
+    </div>
+  </div>
+</aside>
+
+<header class="Header">
+  <div class="u-wrappers">
+    {{#if @blog.logo}}
+      <h1 class="Header-logo">
+        <a href="/" target="" class="Header-logoLink">
+          <img src="{{@blog.logo}}" alt="{{@blog.title}}" class="Header-logoImagen">
+        </a>
+      </h1>
+    {{/if}}
+
+    <label for="MainMenu-callback" class="Header-iconMobile icon-menu"></label>
+    <input type="checkbox" id="MainMenu-callback" class="MainMenu-callback u-inputNone">
+
+    <nav class="MainMenu"><ul class="MainMenu-list">
+      <li class="MainMenu-item">
+        <a href="http://godofredo.ninja" class="MainMenu-link"><i class="icon-home"></i><span>Home</span></a>
+      </li>
+      <li class="MainMenu-item">
+        <a href="http://godofredo.ninja/godofredo" class="MainMenu-link"><i class="icon-user"></i><span>Sobre Mi</span></a>
+      </li>
+      <li class="MainMenu-item">
+        <a href="http://godofredo.ninja/servicios" class="MainMenu-link"><i class="icon-services"></i><span>Servicios</span></a>
+      </li>
+      <li class="MainMenu-item">
+        <a href="http://godofredo.ninja/procesos" class="MainMenu-link"><i class="icon-proces"></i><span>Procesos</span></a>
+      </li>
+      <li class="MainMenu-item">
+        <a href="http://godofredo.ninja/portafolio" class="MainMenu-link"><i class="icon-porfolio"></i><span>Portafolio</span></a>
+      </li>
+      <li class="MainMenu-item">
+        <a href="{{@blog.url}}" class="MainMenu-link"><i class="icon-blog"></i><span>Blog</span></a>
+      </li>
+      <li class="MainMenu-item">
+        <a href="http://godofredo.ninja/contacto" class="MainMenu-link active"><i class="icon-message"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="Homeblog">
+  <div class="u-wrappers">
+    <a class="Homeblog-link icon-home" href="{{@blog.url}}">Home Blog</a>
+  </div>
+</div>
+

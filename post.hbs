@@ -13,6 +13,7 @@
               <img src="{{image}} " alt="{{title}}" class="Content-header-image">
             </figure>
           {{/if}}
+          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
           <h1 class="Content-title">{{title}}</h1>
         </header>
         <div class="Main">
@@ -22,6 +23,7 @@
           {{content}}
         </div>
         <aside class="Share">
+          <h4 class="Share-title">Comparte este post en tus Redes Sociales Favoritas</h4>
           <a class="Share-items icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <span class="hidden">Twittear</span>
