@@ -1,10 +1,10 @@
 {{! Lista de todo mis Post }}
-<section class="Post">
+<section class="Post Clear">
 
   {{#foreach posts}}
 
-  <article class="Post-items u-border">
-      <div class="Post-main">
+  <article class="Post-items">
+      <div class="Post-main u-border">
         <header class="Post-header">
           {{#if image}}
             <a href="{{url}}" class="Post-imageContent"><img class="Post-image" src="{{image}}" alt="{{{title}}}" /></a>

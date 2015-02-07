@@ -15,6 +15,9 @@ fontBody = 'Lato', sans-serif
   margin 0
   padding 0
   box-sizing border-box
+  &:after
+  &:before
+    box-sizing border-box
 
 a
   text-decoration none
@@ -116,14 +119,26 @@ hr
   width 80%
 
 pre
-  background #ece8e6
+  background #f0f2f1
+  border-radius 5px
   color #333333
-  padding .5em
+  font-family Consolas, Monaco, 'Andale Mono', monospace
+  padding .5em 2em .8em 2em
+  text-shadow 0 1px white
+  white-space white-space
+  word-break normal
+  word-spacing normal
+  tab-size 4
+  margin 0 -2em 0 -2em
+
+  code
+    font-size .8em
+    line-height 1
 
 p code
-  background ColorBlue
-  color #fff
-  padding 0 .5em 0 .5em
+  background #272822
+  color #a6e22e
+  padding 2px 4px 2px 4px
   border-radius 5px
 
 blockquote
@@ -154,17 +169,18 @@ ol
     border-left 2px solid #CCCCCC
 
     &:before
-      position absolute
-      top 0
-      left -1em
-      width 0.8em
-      line-height 1
-      font-weight bold
-      text-align right
       color ColorBlue
-
       content counter(li-counter)
       counter-increment li-counter
+      font-family fontBody !important
+      font-weight bold
+      font-weight bold !important
+      left -1em
+      line-height 1
+      position absolute
+      text-align right
+      top 0
+      width 0.8em
 
 ::selection
   background #fba919
@@ -172,4 +188,8 @@ ol
   text-shadow 1px 1px #fff
 
 @import 'body'
+@import '768'
+@import '1024'
+@import '1200'
 @import 'keyframes'
+

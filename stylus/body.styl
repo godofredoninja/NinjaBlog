@@ -1,8 +1,28 @@
+// Autor post main
+.AuthorPost
+  padding-top 1.5em
+  &-imageContent
+    width 100px
+    margin 0 auto
+    border-radius 50%
+  &-avatar
+    border-radius 50%
+    border 5px solid #fff
+    box-shadow 1px 5px 1px rgba(204, 204, 204, 0.8)
+  &-name
+    font-size 1.5em
+    text-transform capitalize
+    font-style italic
+    color  ColorBlue
+  p
+    font-style italic
+    font-size 1.1em
+
 // Aside Top
 .AsideTop
   background #051928
   padding 1em 0 .6em 0
-  &-socialItems
+  &-social
     display none
   &-search
     position relative
@@ -25,19 +45,45 @@
     color #afafaf
     &:hover
       background transparent
+  .searchResults
+    padding 0.2em 1em
+    p
+      display none
+    a
+      color #000
+      text-align left
+      &:hover
+        color ColorCoral
+  #search-results
+    background #fff
+    position relative
+    top 5px
+    border-radius 5px
+
 
 //Content - Post
 .Content
   &-title
-    color #484848
-    font-size 1.5em
-    line-height 1
+    color #525252
+    font-size 1.8em
+    line-height 1.2
     margin 0
     padding 0
     padding .5em 0 1em 0
     text-align left
   &-header
     text-align left
+    &-imageContent
+      margin -1em -2em 0 -2em
+
+// Comments
+.Comments
+  margin-top 3em
+  &-title
+    color #525252
+    float left
+    font-size 1.5em
+    padding 0 0 1em 0
 
 // Home Link Blog
 .Homeblog
@@ -160,13 +206,35 @@
 .Main
   text-align left
   color #3e3f3a
+  font-size 1.2em
+  line-height 160%
+
+  img
+    display block
+    margin 0 auto
+
+
+
+  h2
+    font-size 1.5em
+  h3
+    font-size 1.3em
+  h4
+    font-size 1.2em
+  h5
+    font-size 1em
 
   h2
   h3
   h4
   h5
-    color #f04f53
     padding 1em 0
+    line-height 1.2
+    color #525252
+    &:before
+      margin-right 5px
+      color #f04f53
+      content "#"
 
   blockquote
   ul
@@ -202,11 +270,12 @@
         li
           margin-left 10px
           &:before
-            content ""
-            height 5px
-            width 5px
-            border-radius 50%
             background ColorCoral
+            border-radius 50%
+            color ColorCoral
+            font-size .5em
+            position relative
+            bottom 2px
 
 
 
@@ -257,6 +326,7 @@
 .Landing
   position relative
   background url('../img/bg-Body.jpg')
+  overflow hidden
 
 
 // Post Home
@@ -264,7 +334,6 @@
   padding 0 0 1em 0
   &-items
     margin-bottom 1.5em
-    overflow hidden
   &-main
     text-align left
   &-date
@@ -343,7 +412,8 @@
 
 // Sidebar-right
 .Sidebar
-  padding-top 1em
+  padding-top 3em
+  position relative
   &-items
     margin-bottom 1em
     padding 0 0 1em 0
@@ -355,19 +425,23 @@
 
 // Share
 .Share
+  padding-top 2em
+  &-title
+    font-size 1.3em
+    left 20px
+    position relative
+    text-align left
   &-items
     border-radius 5px
     color #fff
     display inline-block
-    font-size 1.2em
     font-weight bold
     margin-right 2%
     margin-top 15px
-    min-width 230px
+    min-width 200px
     padding 5px 0
     vertical-align top
     width 30%
     &:last-of-type
       margin-right 0
-
 

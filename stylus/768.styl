@@ -1,0 +1,152 @@
+@media screen and (min-width:768px)
+
+  pre
+    margin 0 auto
+    padding .5em 1em .8em 1em
+
+  // AsideTop
+  .AsideTop
+    z-index 200
+    &-social
+      display block
+      float left
+      line-height 0
+      position relative
+      top 7px
+    &-socialItems
+      float left
+      height 20px
+    &-search
+      float right
+      width 250px
+      z-index 200
+    #search-results
+      position absolute
+      top 45px
+      width 100%
+    .t
+      width 240px
+    .f
+      width 100px
+    .y
+      width 130px
+
+  // AuthorPost
+  .AuthorPost
+    overflow hidden
+    text-align left
+    padding-top 2em
+    &-imageContent
+      float left
+      margin-right 10px
+    &-avatar
+      position relative
+      top 8px
+
+
+  // Content Post
+  .Content
+    padding 1.5em 1.5em 2em 1.5em
+    &-header
+      &-imageContent
+        margin 0 auto
+
+  // Footer
+  .Footer
+    overflow hidden
+    &-colLeft
+      float left
+    &-colRight
+      float right
+
+
+  // Header
+  .Header
+    box-shadow 1px 5px 1px rgba(204,204,204,0.8)
+    overflow hidden
+    padding .5em 0
+    transition all .5s ease
+    &.active
+      position fixed
+      padding-top 1em
+    &-iconMobile
+      display none
+    &-logo
+      width auto
+      float left
+    &-logoLink
+       padding 0.7em 0px 0px 0
+    .u-wrappers
+      padding 0px 15px
+      overflow hidden
+
+
+  // menu
+  .MainMenu
+    box-shadow none
+    float right
+    height auto !important
+    width 510px
+    &-item
+      width 70px
+    &-list
+      padding 0
+      overflow-x hidden
+    &-link
+      height auto
+      border-bottom 3px solid transparent
+      &:hover
+      &.active
+        border-bottom 3px solid ColorCoral
+
+  // Main Post Content
+  .Main
+    line-height 170%
+
+  // Post Home
+  .Post
+    display flex
+    flex-wrap wrap
+    justify-content space-around
+    min-height 1px
+    position relative
+    &-title
+      &:hover .Post-titlelink
+        color red
+    &-items
+      display inline-block
+      padding-left 1em
+      padding-right 1em
+      position relative
+      vertical-align top
+      width 49%
+
+  // wrapper
+  .wrapper
+    &-colRight
+      padding 0 1em
+      box-sizing border-box
+
+  // Sidebar
+  .Sidebar
+    &-items
+      display inline-block
+      float left
+      margin-right 2em
+      vertical-align top
+      width 47%
+      position relative
+      &:nth-child(even)
+        float right
+        margin-right 0
+
+  // Share
+  .Share
+    &-items
+      min-width 30%
+
+  // ADS
+  .Ads
+    &-mainTop
+      float left
+      margin-right 10px

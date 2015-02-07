@@ -2,9 +2,9 @@
 {{!< layout/default}}
 
 <section class="wrapper">
-    <div class="u-wrappers">
-
-      {{#post}}
+  <div class="u-wrappers">
+    {{#post}}
+    <div class="wrapper-colRight">
 
       <article class="Content u-border">
         <header class="Content-header">
@@ -13,34 +13,43 @@
               <img src="{{image}} " alt="{{title}}" class="Content-header-image">
             </figure>
           {{/if}}
-          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">Publicado el {{date format="DD MMMM YYYY"}}</time>
           <h1 class="Content-title">{{title}}</h1>
         </header>
         <div class="Main">
-          <aside class="Ads-mainTop">
-            <img src="/assets/example/ads.jpg" alt="">
-          </aside>
           {{content}}
+          <p>{{tags prefix=" Tags "}}</p>
         </div>
-        <aside class="Share">
-          <h4 class="Share-title">Comparte este post en tus Redes Sociales Favoritas</h4>
-          <a class="Share-items icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-            <span class="hidden">Twittear</span>
-          </a>
-          <a class="Share-items icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-            <span class="hidden">Compartir</span>
-          </a>
-          <a class="Share-items icon-google" href="https://plus.google.com/share?url={{url absolute="true"}}"
-            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-            <span class="hidden">Google+</span>
-          </a>
-        </aside>
       </article>
-  {{/post}}
 
-  {{> "sidebar"}}
+      <aside class="Share">
+        <h4 class="Share-title">Si te ha gustado éste Post, por favor, compártelo para que otros puedan leerlo</h4>
+        <a class="Share-items icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"> <span class="hidden">Twittear</span> </a>
+        <a class="Share-items icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"> <span class="hidden">Compartir</span> </a>
+        <a class="Share-items icon-google" href="https://plus.google.com/share?url={{url absolute="true"}}"onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"> <span class="hidden">+ 1</span> </a>
+      </aside>
 
+      {{#author}}
+      <div class="AuthorPost">
+        <figure class="AuthorPost-imageContent">
+          <img class="AuthorPost-avatar u-avatarAnimation" src="{{image}}" alt="{{name}}" />
+        </figure>
+        <section class="AuthorPost-des">
+          <h4 class="AuthorPost-name">{{name}}</h4>
+          <p>{{bio}}</p>
+        </section>
+      </div>
+      {{/author}}
+
+
+      <div class="Comments u-border">
+        <h4 class="Comments-title">¿Y tú qué opinas? Deja un comentario...</h4>
+        {{!-- <div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="10" data-colorscheme="light"></div> --}}
+        <div class=" fb-comments" data-href="http://mejorando.la//blog/porque-mejorando-la-ahora-es-platzi/" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
+      </div>
+
+    </div>
+    {{/post}}
+    {{> "sidebar"}}
   </div>
 </section>
