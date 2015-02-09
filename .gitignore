@@ -1,4 +1,10 @@
 /node_modules
 /assets/lib
 /assets/example
+/assets/scripts
 /npm-debug.log
+/stylus
+.bowerrc
+bower.json
+Gulpfile.js
+.jshintrc
