@@ -4,8 +4,8 @@
 <section class="wrapper">
   <div class="u-wrappers">
     {{#post}}
-    {{#contentFor "meta_facebook"}}{{image}}{{/contentFor}}
-    {{#contentFor "meta_twitter"}}{{image}}{{/contentFor}}
+    {{#contentFor "meta_facebook"}}{{@blog.url}}{{image}}{{/contentFor}}
+    {{#contentFor "meta_twitter"}}{{@blog.url}}{{image}}{{/contentFor}}
     <div class="wrapper-colRight">
       {{!-- Content Post --}}
       <article class="Content u-border">
