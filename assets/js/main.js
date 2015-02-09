@@ -1,23 +1,16 @@
 (function(){
   'use strict';
-
-
-
   // Ads Post Top
-  var AdsPostTop = '<aside class="Ads-mainTop"> <img src="/assets/example/ads.jpg" alt=""></aside>';
+  var AdsPostTop = '<aside class="Ads-mainTop"> </aside>';
   // Ads Sidebar Top
-  var AdsSidebarTop = ' <aside class="Sidebar-items Ads-sidebarTop"> <img src="/assets/example/ads.jpg" alt=""> </aside>';
-  var AdsSidebarBottom = ' <aside class="Sidebar-items"> <div class="Ads-sidebarBottom"><img src="/assets/example/ads.jpg" alt=""></div></aside>';
+  var AdsSidebarTop = ' <aside class="Sidebar-items Ads-sidebarTop"> </aside>';
+  var AdsSidebarBottom = ' <aside class="Sidebar-items"> <div class="Ads-sidebarBottom"></div></aside>';
 
   $('.Main').prepend(AdsPostTop);
-
   $('.Sidebar').prepend(AdsSidebarTop);
   $('.Sidebar').append(AdsSidebarBottom);
-
   // Embed Video Responsive
   $('.Main').fitVids();
-
-
   // Search Header Top
   $('#search').ghostHunter({
     results: '#search-results',
@@ -26,25 +19,4 @@
     result_template : "<div class='searchResults'><a href='{{link}}'><p><h4>{{title}}</h4></p></a></div>",
     onKeyUp         : true
   });
-
-
-
-
-  var altura = $(".Ads-sidebarBottom").offset().top;
-  console.log('gatito '+altura);
-
-  $(window).scroll(function(){
-
-    if($(this).scrollTop() >= altura){
-      $(".Ads-sidebarBottom").css("color","red");
-    }else{
-      $(".Ads-sidebarBottom").css("color","blue");
-
-    }
-
-  });
-
-
-
-
 })();

@@ -1,10 +1,10 @@
-{{! Lista de todo mis Post }}
+{{! List the Post }}
 <section class="Post Clear">
-
   {{#foreach posts}}
-
+  {{!-- Post Items loop --}}
   <article class="Post-items">
       <div class="Post-main u-border">
+        {{!-- Header post Loop --}}
         <header class="Post-header">
           {{#if image}}
             <a href="{{url}}" class="Post-imageContent"><img class="Post-image" src="{{image}}" alt="{{{title}}}" /></a>
@@ -12,10 +12,13 @@
           <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
           <h2 class="Post-title"><a class="Post-titlelink" href="{{url}}">{{{title}}}</a></h2>
         </header>
+        {{!-- excerpt Post --}}
         <section class="Post-excerpt">
           <p>{{excerpt characters="110"}}...</p>
         </section>
+        {{!-- Footer Post items --}}
         <footer class="Post-footer">
+          {{!-- add Author --}}
           {{#if author.image}}
             <img class="Post-autorImage" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />
           {{/if}}
@@ -26,11 +29,8 @@
         </footer>
       </div>
   </article>
-
+  {{!-- end Post Items --}}
   {{/foreach}}
-
 </section>
-{{! Previous/next page links - displayed on every page }}
-
+{{!-- add pagination --}}
 {{pagination}}
-

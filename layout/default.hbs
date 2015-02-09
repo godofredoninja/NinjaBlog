@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es_ES">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1">
+  {{!-- Title Page --}}
   <title>{{meta_title}}</title>
-
+  <meta name="description" content="{{meta_description}}" />
+  {{!-- icon  --}}
+  <link rel="icon" sizes="192x192" href=" {{asset "img/icon.png"}}" />
+  {{!-- og Social Media --}}
+  {{!-- og tags Facebook --}}
+  <meta property="fb:admins" content="981122618569985" />
+  <meta property="og:description" content="{{meta_description}}" />
+  <meta property="og:title" content="GodoFredo.ninja: {{meta_title}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://godofredo.ninja" />
+  <meta property="og:image" content="{{{block "meta_facebook"}}}" />
+  <meta property="og:site_name" content="godofredo.ninja" />
+  {{!-- og tags Google+ --}}
+  <meta itemprop="description" content="{{meta_description}}" />
+  {{!-- Twitter Cards  --}}
+  <meta property="twitter:account_id" content="114069455" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@GodoFredoNinja" />
+  <meta name="twitter:title" content="GodoFredo.ninja: {{meta_title}}" />
+  <meta name="twitter:description" content="{{meta_description}}" />
+  <meta name="twitter:creator" content="@GodoFredoNinja" />
+  <meta name="twitter:image:src" content="{{{block "meta_twitter"}}}" />
+  <meta name="twitter:domain" content="godofredo.ninja" />
+  {{!-- Fonts --}}
   <link href='//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
-
   <!-- bower:css -->
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/assets/css/main.css">
   <!-- endinject -->
-
 </head>
 <body>
-
   <div class="Landing">
     {{> "header"}}
     {{{body}}}
     {{> "footer"}}
   </div>
-
   <!-- bower:js -->
   <script src="/assets/lib/jquery/dist/jquery.js"></script>
   <script src="/assets/lib/fitvids/jquery.fitvids.js"></script>
@@ -30,14 +50,12 @@
   <script src="/assets/js/jquery.ghostHunter.min.js"></script>
   <script src="/assets/js/main.js"></script>
   <!-- endinject -->
-
   <div id="fb-root"></div>
-
-
+  {{!-- Scripts --}}
   <script src="https://platform.twitter.com/widgets.js"></script>
   <script src="https://apis.google.com/js/platform.js"></script>
   <script id="facebook-jssdk" src="//connect.facebook.net/es_ES/sdk.js#xfbml=1&amp;version=v2.0"></script>
+  {{!-- Google Analytics blog.godofredo.ninja  --}}
 
 </body>
 </html>
-
