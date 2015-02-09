@@ -8,11 +8,15 @@ var gulp        = require('gulp'),
   jshint        = require('gulp-jshint'),
   stylish       = require('jshint-stylish'),
   inject        = require('gulp-inject'),
-  wiredep       = require('wiredep').stream;
+  wiredep       = require('wiredep').stream,
+
+  // pro
+  uglify = require('gulp-uglify'),
+  concat = require('gulp-concat');
 
 // Busca errores en el JS y nos los muestra por pantalla
 gulp.task('jshint', function() {
-  return gulp.src('./assets/js/**/*.js')
+  return gulp.src('./assets/scripts/**/*.js')
   .pipe(jshint('.jshintrc'))
   .pipe(jshint.reporter('jshint-stylish'))
   .pipe(jshint.reporter('fail'));
@@ -43,7 +47,7 @@ gulp.task('bower', function () {
 // Busca en las carpetas de estilos y javascript los archivos que hayamos creado
 // para inyectarlos en el index.html
 gulp.task('inject', function() {
-  var sources = gulp.src(['./assets/js/**/*.js','./assets/css/**/*.css']);
+  var sources = gulp.src(['./assets/scripts/**/*.js','./assets/css/**/*.css']);
   return gulp.src('./layout/default.hbs')
   .pipe(inject(sources, {
     read: true,
@@ -56,12 +60,24 @@ gulp.task('inject', function() {
 // y lanza las tareas relacionadas
 gulp.task('watch', function() {
   gulp.watch(['./stylus/**/*.styl'], ['css', 'inject']);
-  gulp.watch(['./assets/js/**/*.js', './Gulpfile.js'], ['jshint', 'inject']);
+  gulp.watch(['./assets/scripts/**/*.js', './Gulpfile.js'], ['jshint', 'inject']);
   gulp.watch(['./bower.json'], ['bower']);
 });
 
-
+// js lib.min.js
+gulp.task('libmin', function () {
+    var url = [
+        './assets/lib/jquery/dist/jquery.js',
+        './assets/lib/fitvids/jquery.fitvids.js',
+        './assets/scripts/jquery.ghostHunter.min.js',
+    ]
+    gulp.src(url)
+    .pipe(concat('lib.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./assets/js/'))
+});
 
 gulp.task('default', ['bower', 'inject', 'watch']);
+gulp.task('pro', ['libmin']);
 
 
