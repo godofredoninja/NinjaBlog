@@ -1,5 +1,6 @@
-{{#contentFor "meta_facebook"}}{{@blog.cover}}{{/contentFor}}
-{{#contentFor "meta_twitter"}}{{@blog.cover}}{{/contentFor}}
+{{#contentFor "meta_facebook"}}{{@blog.url}}{{@blog.cover}}{{/contentFor}}
+{{#contentFor "meta_twitter"}}{{@blog.url}}{{@blog.cover}}{{/contentFor}}
+{{#contentFor "meta_url"}}{{@blog.url}}{{/contentFor}}
 {{!-- Add layout --}}
 {{!< layout/default}}
 <section class="wrapper">

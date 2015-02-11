@@ -1,12 +1,12 @@
 (function(){
   'use strict';
   // Ads Post Top
-  var AdsPostTop = '<aside class="Ads-mainTop"> </aside>';
+  var AdsPostBottom = '<aside class="Ads-mainBottom"></aside>';
   // Ads Sidebar Top
-  var AdsSidebarTop = ' <aside class="Sidebar-items Ads-sidebarTop"> </aside>';
+  var AdsSidebarTop = ' <aside class="Sidebar-items Ads-sidebarTop"></aside>';
   var AdsSidebarBottom = ' <aside class="Sidebar-items"> <div class="Ads-sidebarBottom"></div></aside>';
 
-  $('.Main').prepend(AdsPostTop);
+  $('.Main').append(AdsPostBottom);
   $('.Sidebar').prepend(AdsSidebarTop);
   $('.Sidebar').append(AdsSidebarBottom);
   // Embed Video Responsive

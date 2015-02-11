@@ -26,7 +26,7 @@
   <div class="u-wrappers">
     {{#if @blog.logo}}
       <div class="Header-logo">
-        <a href="http://godofredo.ninja" target="" class="Header-logoLink">
+        <a href="{{@blog.url}}" target="" class="Header-logoLink">
           <img src="{{@blog.logo}}" alt="{{@blog.title}}" class="Header-logoImagen">
         </a>
       </div>
@@ -37,7 +37,7 @@
     {{!-- Nav Menu --}}
     <nav class="MainMenu"><ul class="MainMenu-list">
       <li class="MainMenu-item">
-        <a href="http://godofredo.ninja" class="MainMenu-link">
+        <a href="{{@blog.url}}" class="MainMenu-link">
           <i class="icon-home"></i>
           <span>Home</span>
         </a>

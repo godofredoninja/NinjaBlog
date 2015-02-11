@@ -12,22 +12,20 @@
   {{!-- og tags Facebook --}}
   <meta property="fb:admins" content="981122618569985" />
   <meta property="og:description" content="{{meta_description}}" />
-  <meta property="og:title" content="GodoFredo.ninja: {{meta_title}}" />
+  <meta property="og:title" content="{{meta_title}}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://godofredo.ninja" />
+  <meta property="og:url" content="{{{block "meta_url"}}}" />
   <meta property="og:image" content="{{{block "meta_facebook"}}}" />
-  <meta property="og:site_name" content="godofredo.ninja" />
   {{!-- og tags Google+ --}}
   <meta itemprop="description" content="{{meta_description}}" />
   {{!-- Twitter Cards  --}}
   <meta property="twitter:account_id" content="114069455" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@GodoFredoNinja" />
-  <meta name="twitter:title" content="GodoFredo.ninja: {{meta_title}}" />
+  <meta name="twitter:title" content="{{meta_title}}" />
   <meta name="twitter:description" content="{{meta_description}}" />
   <meta name="twitter:creator" content="@GodoFredoNinja" />
   <meta name="twitter:image:src" content="{{{block "meta_twitter"}}}" />
-  <meta name="twitter:domain" content="godofredo.ninja" />
   {{!-- Fonts --}}
   <link href='//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
   <!-- bower:css -->
@@ -52,9 +50,11 @@
   <!-- endinject -->
   <div id="fb-root"></div>
   {{!-- Scripts --}}
+
   <script src="https://platform.twitter.com/widgets.js"></script>
   <script src="https://apis.google.com/js/platform.js"></script>
-  <script src="https//connect.facebook.net/es_ES/sdk.js#xfbml=1&amp;version=v2.0"></script>
+  <script src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&amp;version=v2.0"></script>
+
   {{!-- Google Analytics blog.godofredo.ninja  --}}
 
 </body>
