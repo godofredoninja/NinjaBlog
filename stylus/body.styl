@@ -63,6 +63,7 @@
 
 //Content - Post
 .Content
+  padding-bottom 2em
   &-title
     color #525252
     font-size 1.8em
@@ -208,12 +209,15 @@
   color #3e3f3a
   font-size 1.2em
   line-height 160%
+  &-tags
+    padding-top 1.5em
+
+  strong
+    font-weight 800
 
   img
     display block
-    margin 0 auto
-
-
+    margin 1.8em auto 0 auto
 
   h2
     font-size 1.5em
@@ -260,19 +264,21 @@
       border-bottom .08em solid ColorBlue
 
   ul
+    padding 1em 0
     li
       &:before
         content "\e611"
         font-family iconitos
-        color ColorBlue
+        color ColorCoral
         margin-right 5px
       ul
+        padding .5em 0
         li
           margin-left 10px
           &:before
-            background ColorCoral
+            background ColorBlue
             border-radius 50%
-            color ColorCoral
+            color ColorBlue
             font-size .5em
             position relative
             bottom 2px
@@ -427,10 +433,10 @@
 .Share
   padding-top 2em
   &-title
-    font-size 1.3em
-    left 20px
+    display block
+    font-size 1.2em
+    padding .8em 0
     position relative
-    text-align left
   &-items
     border-radius 5px
     color #fff

@@ -1,7 +1,14 @@
 @media screen and (min-width:768px)
 
+  ol li:before
+    font-size 1.4em
+
+  blockquote
+    padding-top 2em
+    &:before
+      top 1em
   pre
-    margin 0 auto
+    margin 1.5em auto
     padding .5em 1em .8em 1em
 
   // AsideTop
@@ -45,7 +52,7 @@
 
   // Content Post
   .Content
-    padding 1.5em 1.5em 2em 1.5em
+    padding 1.5em 2em 2.5em 2em
     &-header
       &-imageContent
         margin 0 auto
@@ -102,6 +109,10 @@
   .Main
     line-height 170%
 
+    ul
+    ol
+      padding 1.5em 0
+
   // Post Home
   .Post
     display flex
@@ -146,6 +157,5 @@
 
   // ADS
   .Ads
-    &-mainTop
-      float left
-      margin-right 10px
+    &-mainBottom
+      margin 10px auto 0 auto
