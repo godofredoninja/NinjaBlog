@@ -16,14 +16,14 @@
               <img src="{{image}}" alt="{{title}}" class="Content-header-image">
             </figure>
           {{/if}}
-          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">Publicado el {{date format="DD MMMM YYYY"}}</time>
+          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">Publicado por: {{#author}}{{name}}{{/author}} el {{date format="DD MMMM YYYY"}}</time>
           <h1 class="Content-title">{{title}}</h1>
         </header>
         {{!-- Content All Post --}}
         <div class="Main">
           {{content}}
           {{!-- Add tag Post --}}
-          <div class="Main-tags">{{tags prefix=" Tags "}}</div>
+          <div class="Main-tags">{{tags prefix=" Más de: "}}</div>
         </div>
       </article>
       {{!-- Add Share Post - Social --}}
