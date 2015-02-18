@@ -66,16 +66,16 @@
   padding-bottom 2em
   &-title
     color #525252
-    font-size 1.8em
+    font-weight 800
     line-height 1.2
     margin 0
     padding 0
-    padding .5em 0 1em 0
+    padding-top .4em
     text-align left
   &-header
     text-align left
     &-imageContent
-      margin -1em -2em 0 -2em
+      margin 0 -2em 0 -2em
 
 // Comments
 .Comments
@@ -205,18 +205,15 @@
 
 // Main Post Content
 .Main
-  text-align left
-  color #3e3f3a
   font-size 1.2em
   line-height 160%
+  padding-top .8em
+  text-align left
   &-tags
     font-size .8em
     font-weight bold
     padding-top 1.5em
     text-transform uppercase
-
-  strong
-    font-weight 800
 
   img
     display block
@@ -390,6 +387,8 @@
     a
       display inline
       color #656565
+      &:hover
+        color ColorBlue
   &-tagEnd
     background linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1))
     content " "
@@ -434,23 +433,29 @@
 
 // Share
 .Share
-  padding-top 2em
+  padding-top 1em
+  padding-bottom 1em
+  margin 0 -2em 0 -2em
+  text-align center
   &-title
     display block
     font-size 1.2em
-    padding .8em 0
+    padding .8em 2em .8em 2em
     position relative
   &-items
-    border-radius 5px
+    border-radius 3px
     color #fff
     display inline-block
-    font-weight bold
-    margin-right 2%
-    margin-top 15px
-    min-width 200px
+    margin-right 1%
+    height 36px
     padding 5px 0
     vertical-align top
-    width 30%
+    min-width 70px
+    width 20%
+    &:before
+      font-size 1.5em
     &:last-of-type
       margin-right 0
+  .hidden
+    display none
 
