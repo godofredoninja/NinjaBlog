@@ -51,6 +51,12 @@
           <h4 class="AuthorPost-name">{{name}}</h4>
           <p>{{bio}}</p>
         </section>
+
+        <div class="AuthorPost-meta">
+          {{#if location}}<span class="AuthorPost-location icon-location2">{{location}}</span>{{/if}}
+          {{#if website}}<a href="{{website}}" class="AuthorPost-link icon-earth">Website</a>{{/if}}
+        </div>
+
       </div>
       {{/author}}
       {{!-- Add Comments Facebook --}}
