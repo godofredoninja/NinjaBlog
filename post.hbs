@@ -4,26 +4,33 @@
 <section class="wrapper">
   <div class="u-wrappers">
     {{#post}}
-    {{#contentFor "meta_facebook"}}{{@blog.url}}{{image}}{{/contentFor}}
-    {{#contentFor "meta_twitter"}}{{@blog.url}}{{image}}{{/contentFor}}
-    {{#contentFor "meta_url"}}{{@blog.url}}{{url}}{{/contentFor}}
+    {{!-- og Social Media --}}
+    {{#contentFor "meta_facebook"}}{{image absolute="true"}}{{/contentFor}}
+    {{#contentFor "meta_twitter"}}{{image absolute="true"}}{{/contentFor}}
+    {{#contentFor "meta_url"}}{{url absolute="true"}}{{/contentFor}}
     <div class="wrapper-colRight">
       {{!-- Content Post --}}
       <article class="Content u-border">
         <header class="Content-header">
+          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">Por: <span class="Post-dateAutor">{{#author}}{{name}}{{/author}}</span> el {{date format="DD MMM YYYY"}}</time>
+          <h1 class="Content-title">{{title}}</h1>
+          <aside class="Share">
+            <a class="Share-items icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"> <span class="hidden">Twittear</span> </a>
+            <a class="Share-items icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"> <span class="hidden">Compartir</span> </a>
+            <a class="Share-items icon-google" href="https://plus.google.com/share?url={{url absolute="true"}}"onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"> <span class="hidden">+ 1</span> </a>
+            <a class="Share-items icon-whatsapp" href="whatsapp://send" data-text="{{title}}" data-href="{{url absolute="true"}}"><span class="hidden">Compartir</span></a>
+          </aside>
           {{#if image}}
             <figure class="Content-header-imageContent">
               <img src="{{image}}" alt="{{title}}" class="Content-header-image">
             </figure>
           {{/if}}
-          <time class="Post-date icon-calendar" datetime="{{date format='YYYY-MM-DD'}}">Publicado el {{date format="DD MMMM YYYY"}}</time>
-          <h1 class="Content-title">{{title}}</h1>
         </header>
         {{!-- Content All Post --}}
         <div class="Main">
           {{content}}
           {{!-- Add tag Post --}}
-          <div class="Main-tags">{{tags prefix=" Tags "}}</div>
+          <div class="Main-tags">{{tags prefix=" Más de: "}}</div>
         </div>
       </article>
       {{!-- Add Share Post - Social --}}
@@ -32,6 +39,7 @@
         <a class="Share-items icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"> <span class="hidden">Twittear</span> </a>
         <a class="Share-items icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"> <span class="hidden">Compartir</span> </a>
         <a class="Share-items icon-google" href="https://plus.google.com/share?url={{url absolute="true"}}"onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"> <span class="hidden">+ 1</span> </a>
+        <a class="Share-items icon-whatsapp" href="whatsapp://send" data-text="{{title}}" data-href="{{url absolute="true"}}"><span class="hidden">Compartir</span></a>
       </aside>
       {{!-- Add Auhor Post --}}
       {{#author}}
@@ -43,6 +51,10 @@
           <h4 class="AuthorPost-name">{{name}}</h4>
           <p>{{bio}}</p>
         </section>
+        <div class="AuthorPost-meta">
+          {{#if location}}<span class="AuthorPost-location icon-location2">{{location}}</span>{{/if}}
+          {{#if website}}<a href="{{website}}" class="AuthorPost-link icon-earth" target="_bank">Website</a>{{/if}}
+        </div>
       </div>
       {{/author}}
       {{!-- Add Comments Facebook --}}
@@ -50,7 +62,6 @@
         <h4 class="Comments-title">¿Y tú qué opinas? Deja un comentario...</h4>
         <div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
       </div>
-
     </div>
     {{/post}}
     {{!-- add Sidebar right --}}
