@@ -51,12 +51,10 @@
           <h4 class="AuthorPost-name">{{name}}</h4>
           <p>{{bio}}</p>
         </section>
-
         <div class="AuthorPost-meta">
           {{#if location}}<span class="AuthorPost-location icon-location2">{{location}}</span>{{/if}}
-          {{#if website}}<a href="{{website}}" class="AuthorPost-link icon-earth">Website</a>{{/if}}
+          {{#if website}}<a href="{{website}}" class="AuthorPost-link icon-earth" target="_bank">Website</a>{{/if}}
         </div>
-
       </div>
       {{/author}}
       {{!-- Add Comments Facebook --}}
@@ -64,7 +62,6 @@
         <h4 class="Comments-title">¿Y tú qué opinas? Deja un comentario...</h4>
         <div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
       </div>
-
     </div>
     {{/post}}
     {{!-- add Sidebar right --}}
