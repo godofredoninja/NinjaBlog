@@ -1,11 +1,12 @@
 (function(){
   'use strict';
   // Ads Post Top
-  var AdsPostBottom = '<aside class="Ads Ads-mainBottom"></aside>';
+  var AdsPostBottom = '<aside class="Ads Ads-mainBottom"><ins class="adsbygoogle"style="display:inline-block;width:468px;height:60px"data-ad-client="ca-pub-3462564966072994"data-ad-slot="1972609664"> </ins></aside>';
   // Ads Sidebar Top
-  var AdsSidebarTop = '<aside class="Sidebar-items Ads Ads-sidebarTop"></aside>';
+  var AdsSidebarTop = '<aside class="Sidebar-items Ads Ads-sidebarTop"><ins class="adsbygoogle"style="display:inline-block;width:300px;height:250px"data-ad-client="ca-pub-3462564966072994"data-ad-slot="7911725262"> </ins></aside>';
+  var AdsResponsive = '<ins class="adsbygoogle"style="display:inline-block;width:320px;height:50px"data-ad-client="ca-pub-3462564966072994"data-ad-slot="7857692865"> </ins>';
 
-  $('.Main').prepend(AdsPostTop);
+  $('.Main').append(AdsPostBottom);
   $('.Sidebar').prepend(AdsSidebarTop);
   $('.Ads-Responsive').html(AdsResponsive);
   // Embed Video Responsive
