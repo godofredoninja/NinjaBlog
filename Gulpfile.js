@@ -70,6 +70,7 @@ gulp.task('libmin', function () {
         './assets/lib/jquery/dist/jquery.js',
         './assets/lib/fitvids/jquery.fitvids.js',
         './assets/scripts/jquery.ghostHunter.min.js',
+        './assets/scripts/prism.js'
     ]
     gulp.src(url)
     .pipe(concat('lib.min.js'))
