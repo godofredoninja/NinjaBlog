@@ -1,14 +1,13 @@
 (function(){
   'use strict';
   // Ads Post Top
-  var AdsPostTop = '<aside class="Ads-mainTop"> </aside>';
+  var AdsPostBottom = '<aside class="Ads Ads-mainBottom"></aside>';
   // Ads Sidebar Top
-  var AdsSidebarTop = ' <aside class="Sidebar-items Ads-sidebarTop"> </aside>';
-  var AdsSidebarBottom = ' <aside class="Sidebar-items"> <div class="Ads-sidebarBottom"></div></aside>';
+  var AdsSidebarTop = '<aside class="Sidebar-items Ads Ads-sidebarTop"></aside>';
 
   $('.Main').prepend(AdsPostTop);
   $('.Sidebar').prepend(AdsSidebarTop);
-  $('.Sidebar').append(AdsSidebarBottom);
+  $('.Ads-Responsive').html(AdsResponsive);
   // Embed Video Responsive
   $('.Main').fitVids();
   // Search Header Top
@@ -19,12 +18,8 @@
     result_template : "<div class='searchResults'><a href='{{link}}'><p><h4>{{title}}</h4></p></a></div>",
     onKeyUp         : true
   });
-
   // Facebook Embed
   $('.fb-post').wrap( '<div class="Facebook-embed"></div>');
-
   // Facebook Embed
   $('.twitter-tweet').wrap( '<div class="Twitter-embed"></div>');
-
-
 })();
