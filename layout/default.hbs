@@ -29,6 +29,7 @@
   {{!-- Fonts --}}
   <link href='//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{asset "css/main.css"}}">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
   <div class="Landing">
@@ -36,13 +37,16 @@
     {{{body}}}
     {{> "footer"}}
     {{!-- Add ads --}}
-    <aside class="Ads Ads-Responsive">
+    <aside class="Ads Ads-Responsive" style="background:#fff">
       <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:50px"
         data-ad-client="ca-pub-3462564966072994"
         data-ad-slot="7857692865">
       </ins>
     </aside>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
   <script src="{{asset "js/lib.min.js"}}"></script>
   <script src="{{asset "js/main.js"}}"></script>
@@ -54,9 +58,5 @@
   <script> (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); </script>
   {{!-- Add Google Analytics  --}}
   {{> "analytics"}}
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
 </body>
 </html>
